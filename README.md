@@ -362,17 +362,6 @@ protected void setup() {
 
 ---
 
-## ⚠️ Campos que NO funcionan (versión actual)
-
-Estos campos están documentados pero **NO son reconocidos** por el servidor:
-
-- `HealthRegenPerSecond` - Usa `StatModifiers.Health` en su lugar
-- `JumpHeightMultiplier` - No disponible actualmente
-- `FallDamageMultiplier` - No disponible actualmente
-- `StatusEffectIcon` - Puede causar errores si la ruta no existe
-
----
-
 **¡Happy modding!** 🎮
 
 *By ScarForges*
