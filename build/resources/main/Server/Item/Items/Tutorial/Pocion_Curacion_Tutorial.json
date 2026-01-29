@@ -8,6 +8,32 @@
     "TranslationProperties": {
         "Name": "Tutorial Pocion de Curacion"
     },
+    
+    "_INFO_RECIPE": "============ SISTEMA DE CRAFTEO ============",
+    "_RECIPE_DESCRIPCION": "Permite craftear la pocion en una mesa de alquimia",
+    "Recipe": {
+        "_INFO_TimeSeconds": "Tiempo que tarda en craftearse (en segundos)",
+        "TimeSeconds": 2,
+        
+        "_INFO_KnowledgeRequired": "Si es true, necesitas desbloquear la receta primero",
+        "KnowledgeRequired": false,
+        
+        "_INFO_Input": "Ingredientes necesarios para craftear",
+        "Input": [
+            { "ItemId": "Potion_Empty", "Quantity": 1 },
+            { "ItemId": "Ingredient_Life_Essence", "Quantity": 3 },
+            { "ItemId": "Ingredient_Water_Essence", "Quantity": 2 }
+        ],
+        
+        "_INFO_BenchRequirement": "Mesa de crafteo requerida",
+        "BenchRequirement": [
+            { "Id": "Alchemybench", "Type": "Crafting", "Categories": ["Alchemy_Potions_Misc"] }
+        ],
+        
+        "_INFO_RequiredMemoriesLevel": "Nivel de progresion requerido (1 = basico)",
+        "RequiredMemoriesLevel": 1
+    },
+    
     "Interactions": {
         "Primary": "Block_Primary",
         "Secondary": "Root_Secondary_Consume_Potion"

@@ -94,8 +94,31 @@ Los **efectos** son modificadores temporales que afectan al jugador. Se definen 
 | Efecto | Descripción | Estado |
 |--------|-------------|--------|
 | `HorizontalSpeedMultiplier` | Multiplicador de velocidad (1.5 = 50% más rápido) | ✅ Funciona |
-| `MorphModelId` | ID del modelo para transformación | ⚠️ Probar |
 | `LocalSoundEventId` | Sonido al aplicar | ✅ Funciona |
+
+### Transformación con `ModelChange` (nivel raíz)
+
+> ⚠️ **Importante**: `ModelChange` va a **nivel raíz** del efecto, NO dentro de `ApplicationEffects`.
+
+```json
+{
+    "Duration": 60,
+    "ModelChange": "Boar",
+    "ApplicationEffects": {
+        "LocalSoundEventId": "SFX_Health_Potion_Low_Drink"
+    }
+}
+```
+
+| Modelo | Criatura |
+|--------|----------|
+| `Boar` | Jabalí |
+| `Bear_Grizzly` | Oso Grizzly |
+| `Wolf` | Lobo |
+| `Chicken` | Gallina |
+| `Cow` | Vaca |
+| `Pig` | Cerdo |
+| `Sheep` | Oveja |
 
 > ⚠️ **Nota importante**: Algunos campos documentados como `HealthRegenPerSecond`, `JumpHeightMultiplier` y `FallDamageMultiplier` **NO funcionan** en la versión actual de Hytale. Para curar vida, usa `StatModifiers` en las interacciones.
 
@@ -155,6 +178,36 @@ Los **consumibles** son items que el jugador puede usar (click derecho) para obt
 | `InteractionVars.Effect` | Qué efectos/acciones se ejecutan al consumir |
 | `ApplyEffect` | Aplica un efecto definido en Entity/Effects |
 | `CustomModelTexture` | Color de la poción (Red, Yellow, Purple, Orange, Green) |
+
+### Sistema de Crafteo (Recipe)
+
+Puedes hacer que tus pociones sean **crafteables** en mesas de alquimia:
+
+```json
+"Recipe": {
+    "TimeSeconds": 2,
+    "KnowledgeRequired": false,
+    "Input": [
+        { "ItemId": "Potion_Empty", "Quantity": 1 },
+        { "ItemId": "Ingredient_Life_Essence", "Quantity": 3 },
+        { "ItemId": "Ingredient_Water_Essence", "Quantity": 2 }
+    ],
+    "BenchRequirement": [
+        { "Id": "Alchemybench", "Type": "Crafting", "Categories": ["Alchemy_Potions_Misc"] }
+    ],
+    "RequiredMemoriesLevel": 1
+}
+```
+
+| Campo | Descripción |
+|-------|-------------|
+| `TimeSeconds` | Tiempo de crafteo en segundos |
+| `KnowledgeRequired` | Si necesita desbloquear la receta primero |
+| `Input` | Lista de ingredientes necesarios |
+| `BenchRequirement` | Mesa de crafteo requerida |
+| `RequiredMemoriesLevel` | Nivel de "memorias" requerido (progresión) |
+
+> 📌 Ver `Pocion_Curacion_Tutorial.json` para un ejemplo completo con Recipe.
 
 ### Curación instantánea con StatModifiers
 
