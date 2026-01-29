@@ -118,8 +118,6 @@ Los **efectos** son modificadores temporales que afectan al jugador. Se definen 
 | `Cow` | Vaca |
 | `Pig` | Cerdo |
 
-> ⚠️ **Nota importante**: Algunos campos documentados como `HealthRegenPerSecond`, `JumpHeightMultiplier` y `FallDamageMultiplier` **NO funcionan** en la versión actual de Hytale. Para curar vida, usa `StatModifiers` en las interacciones.
-
 ---
 
 ## 📖 PARTE 2: Items Consumibles
