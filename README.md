@@ -47,7 +47,7 @@ TutorialConsumables/
 
 | Poción | ID | Descripción |
 |--------|-----|-------------|
-| 🔴 Curación | `Pocion_Curacion_Tutorial` | Cura 20 puntos de vida instantáneamente |
+| 🔴 Curación | `Pocion_Curacion_Tutorial` | Cura 20% de vida máxima instantáneamente |
 | 🟡 Velocidad | `Pocion_Velocidad_Tutorial` | +50% velocidad por 30 segundos |
 | 🟣 Mágica | `Pocion_Magica_Tutorial` | Ejecuta código Java (envía mensaje) |
 | 🟠 Suprema | `Pocion_Suprema_Tutorial` | Velocidad + código Java |
@@ -207,13 +207,32 @@ Puedes hacer que tus pociones sean **crafteables** en mesas de alquimia:
 
 ### Curación instantánea con StatModifiers
 
-Para curar vida instantáneamente, usa `StatModifiers` en las interacciones:
+Para curar vida, `StatModifiers` debe ir en el **EFECTO** (no en la interacción del item):
 
+**Archivo: `Efecto_Curacion.json`**
+```json
+{
+    "StatModifiers": {
+        "Health": 20
+    },
+    "ValueType": "Percent",
+    "OverlapBehavior": "Overwrite",
+    "Duration": 0.1,
+    "DamageCalculatorCooldown": 0
+}
+```
+
+| Campo | Descripción |
+|-------|-------------|
+| `StatModifiers.Health` | Cantidad de vida a curar |
+| `ValueType` | `"Percent"` = porcentaje de vida máxima, `"Absolute"` = valor fijo |
+| `Duration` | `0.1` = muy corto para que sea "instantáneo" |
+
+Luego en el item solo aplicas el efecto:
 ```json
 "Effect": {
     "Interactions": [
-        { "Type": "ApplyEffect", "EffectId": "Efecto_Curacion" },
-        { "Type": "Simple", "StatModifiers": { "Health": 20 } }
+        { "Type": "ApplyEffect", "EffectId": "Efecto_Curacion" }
     ]
 }
 ```

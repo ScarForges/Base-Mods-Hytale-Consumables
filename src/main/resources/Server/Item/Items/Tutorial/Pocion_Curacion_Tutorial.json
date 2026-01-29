@@ -1,8 +1,8 @@
 {
     "_TITULO": "============ POCION DE CURACION ============",
-    "_DESCRIPCION": "Cura 20 puntos de vida instantaneamente",
+    "_DESCRIPCION": "Cura 20% de la vida maxima instantaneamente",
     "_COMANDO": "/give Tutorial:Pocion_Curacion_Tutorial",
-    "_COMO_FUNCIONA": "La curacion se hace con StatModifiers.Health, NO con el efecto",
+    "_COMO_FUNCIONA": "La curacion se hace con StatModifiers en el EFECTO (Efecto_Curacion.json)",
     
     "Parent": "Potion_Template",
     "TranslationProperties": {
@@ -43,9 +43,9 @@
             "Interactions": [{ "Type": "Simple" }]
         },
         "Effect": {
+            "_INFO": "Solo ApplyEffect, la curacion esta en el efecto",
             "Interactions": [
-                { "Type": "ApplyEffect", "EffectId": "Efecto_Curacion" },
-                { "Type": "Simple", "StatModifiers": { "Health": 20 } }
+                { "Type": "ApplyEffect", "EffectId": "Efecto_Curacion" }
             ]
         },
         "Stat_Check": {
