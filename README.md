@@ -114,11 +114,9 @@ Los **efectos** son modificadores temporales que afectan al jugador. Se definen 
 |--------|----------|
 | `Boar` | Jabalí |
 | `Bear_Grizzly` | Oso Grizzly |
-| `Wolf` | Lobo |
 | `Chicken` | Gallina |
 | `Cow` | Vaca |
 | `Pig` | Cerdo |
-| `Sheep` | Oveja |
 
 > ⚠️ **Nota importante**: Algunos campos documentados como `HealthRegenPerSecond`, `JumpHeightMultiplier` y `FallDamageMultiplier` **NO funcionan** en la versión actual de Hytale. Para curar vida, usa `StatModifiers` en las interacciones.
 
