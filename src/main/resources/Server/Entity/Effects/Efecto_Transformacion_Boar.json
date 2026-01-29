@@ -1,0 +1,24 @@
+{
+    "_TITULO": "============ EFECTO: TRANSFORMACION ============",
+    "_DESCRIPCION": "Transforma al jugador en un Jabali (Boar)",
+    "_NOTA": "ModelChange va a nivel RAIZ, NO dentro de ApplicationEffects",
+    
+    "_INFO_StatusEffectIcon": "Icono que aparece en la UI cuando el efecto esta activo",
+    "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+    
+    "_INFO_OverlapBehavior": "Que pasa si tomas otra pocion igual: Overwrite=reemplaza",
+    "OverlapBehavior": "Overwrite",
+    
+    "_INFO_Duration": "Duracion de la transformacion en segundos",
+    "Duration": 60,
+    
+    "_INFO_ModelChange": "ID del modelo en que te transformas (Boar, Bear_Grizzly, etc)",
+    "_MODELOS_EJEMPLO": "Boar, Bear_Grizzly, Wolf, Chicken, Cow, Pig, Sheep, etc",
+    "ModelChange": "Boar",
+    
+    "_INFO_ApplicationEffects": "Efectos adicionales durante la transformacion",
+    "ApplicationEffects": {
+        "_INFO_LocalSoundEventId": "Sonido que se reproduce al transformarte",
+        "LocalSoundEventId": "SFX_Health_Potion_Low_Drink"
+    }
+}

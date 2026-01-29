@@ -1,0 +1,40 @@
+{
+    "_TITULO": "============ POCION DE VELOCIDAD ============",
+    "_DESCRIPCION": "Aumenta la velocidad de movimiento por 30 segundos",
+    "_COMANDO": "/give Tutorial:Pocion_Velocidad_Tutorial",
+    "_COMO_FUNCIONA": "Effect.Interactions aplica Efecto_Velocidad de Entity/Effects/",
+    
+    "Parent": "Potion_Template",
+    "TranslationProperties": {
+        "Name": "Tutorial Pocion de Velocidad"
+    },
+    "Interactions": {
+        "Primary": "Block_Primary",
+        "Secondary": "Root_Secondary_Consume_Potion"
+    },
+    "InteractionVars": {
+        "RemoveEffect": {
+            "Interactions": [{ "Type": "Simple" }]
+        },
+        "Effect": {
+            "Interactions": [
+                { "Type": "ApplyEffect", "EffectId": "Efecto_Velocidad" }
+            ]
+        },
+        "Stat_Check": {
+            "Interactions": [{ "Parent": "Stat_Check", "Costs": { "Health": 1 }, "ValueType": "Percent", "LessThan": false }]
+        },
+        "ConsumeSFX": {
+            "Interactions": [{ "Parent": "Consume_SFX", "Effects": { "LocalSoundEventId": "SFX_Health_Potion_Low_Drink" } }]
+        },
+        "ConsumedSFX": {
+            "Interactions": [{ "Type": "Simple" }]
+        }
+    },
+    "BlockType": {
+        "CustomModel": "Items/Consumables/Potions/Potion.blockymodel",
+        "CustomModelTexture": [{ "Texture": "Items/Consumables/Potions/Potion_Textures/Yellow.png", "Weight": 1 }]
+    },
+    "MaxStack": 10,
+    "DropOnDeath": true
+}

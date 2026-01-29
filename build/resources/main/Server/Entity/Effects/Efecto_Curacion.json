@@ -1,0 +1,20 @@
+{
+    "_TITULO": "============ EFECTO: CURACION ============",
+    "_DESCRIPCION": "Efecto visual/sonoro de curacion. La vida real se cura con StatModifiers en la pocion",
+    "_NOTA": "HealthRegenPerSecond NO funciona en Hytale actual, por eso usamos StatModifiers",
+    
+    "_INFO_StatusEffectIcon": "Icono que aparece en la UI cuando el efecto esta activo",
+    "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+    
+    "_INFO_OverlapBehavior": "Que pasa si tomas otra pocion igual: Overwrite=reemplaza",
+    "OverlapBehavior": "Overwrite",
+    
+    "_INFO_Duration": "Duracion del efecto en segundos (solo visual)",
+    "Duration": 5,
+    
+    "_INFO_ApplicationEffects": "Efectos aplicados (solo sonido en este caso)",
+    "ApplicationEffects": {
+        "_INFO_LocalSoundEventId": "Sonido que se reproduce al aplicar el efecto",
+        "LocalSoundEventId": "SFX_Health_Potion_Low_Drink"
+    }
+}

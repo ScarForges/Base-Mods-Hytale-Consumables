@@ -1,0 +1,22 @@
+{
+    "_COMENTARIO_1": "===========================================",
+    "_COMENTARIO_2": "     TUTORIAL: CONSUMABLES Y EFECTOS",
+    "_COMENTARIO_3": "===========================================",
+    "_COMENTARIO_4": "Este mod enseña a crear pociones con efectos y código Java",
+    
+    "Group": "tutorial",
+    "Name": "TutorialConsumables",
+    "Version": "1.0.0",
+    "Description": "Tutorial de consumibles, efectos e interacciones Java para Hytale",
+    "Authors": [
+        {
+            "Name": "ScarForges"
+        }
+    ],
+    "ServerVersion": "*",
+    "Dependencies": {},
+    "OptionalDependencies": {},
+    "DisabledByDefault": false,
+    "Main": "me.tutorial.consumables.Main",
+    "IncludesAssetPack": true
+}

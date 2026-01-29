@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+version = project.version
+
+// Usamos Java 25 para Hytale
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Dependencia del servidor de Hytale - SOLO para compilación
+    // Usa el JAR del servidor instalado localmente
+    compileOnly(files(System.getProperty("user.home") + "/AppData/Roaming/Hytale/install/release/package/game/latest/Server/HytaleServer.jar"))
+}
+
+// Procesar recursos y expandir variables en manifest.json
+processResources {
+    var expandProps = [
+        'name'          : project.name,
+        'version'       : project.version,
+        'group'         : project.group,
+        'description'   : mod_description,
+        'server_version': server_version,
+        'entry_point'   : entry_point
+    ]
+
+    filesMatching(['manifest.json']) {
+        expand expandProps
+    }
+    inputs.properties(expandProps)
+}
+
+// Configuración del JAR
+jar {
+    archiveBaseName = project.name
+    archiveVersion = project.version
+}

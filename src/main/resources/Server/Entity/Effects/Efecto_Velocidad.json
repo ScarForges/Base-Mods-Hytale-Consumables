@@ -1,0 +1,22 @@
+{
+    "_TITULO": "============ EFECTO: VELOCIDAD ============",
+    "_DESCRIPCION": "Aumenta la velocidad de movimiento del jugador",
+    
+    "_INFO_StatusEffectIcon": "Icono que aparece en la UI cuando el efecto esta activo",
+    "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+    
+    "_INFO_OverlapBehavior": "Que pasa si tomas otra pocion igual: Overwrite=reemplaza, Stack=acumula",
+    "OverlapBehavior": "Overwrite",
+    
+    "_INFO_Duration": "Duracion del efecto en segundos",
+    "Duration": 30,
+    
+    "_INFO_ApplicationEffects": "Los modificadores que se aplican al jugador",
+    "ApplicationEffects": {
+        "_INFO_HorizontalSpeedMultiplier": "Multiplicador de velocidad (1.5 = 50% mas rapido, 2.0 = doble)",
+        "HorizontalSpeedMultiplier": 5,
+        
+        "_INFO_LocalSoundEventId": "Sonido que se reproduce al aplicar el efecto",
+        "LocalSoundEventId": "SFX_Health_Potion_Low_Drink"
+    }
+}

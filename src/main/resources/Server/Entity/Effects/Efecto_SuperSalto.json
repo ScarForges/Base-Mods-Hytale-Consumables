@@ -1,0 +1,8 @@
+{
+    "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Purify.png",
+    "OverlapBehavior": "Overwrite",
+    "Duration": 30,
+    "ApplicationEffects": {
+        "LocalSoundEventId": "SFX_Health_Potion_Low_Drink"
+    }
+}

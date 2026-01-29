@@ -1,0 +1,22 @@
+{
+    "_COMENTARIO_1": "===========================================",
+    "_COMENTARIO_2": "     TUTORIAL: CONSUMABLES Y EFECTOS",
+    "_COMENTARIO_3": "===========================================",
+    "_COMENTARIO_4": "Este mod enseña a crear pociones con efectos y código Java",
+    
+    "Group": "${group}",
+    "Name": "${name}",
+    "Version": "${version}",
+    "Description": "${description}",
+    "Authors": [
+        {
+            "Name": "ScarForges"
+        }
+    ],
+    "ServerVersion": "${server_version}",
+    "Dependencies": {},
+    "OptionalDependencies": {},
+    "DisabledByDefault": false,
+    "Main": "${entry_point}",
+    "IncludesAssetPack": true
+}
