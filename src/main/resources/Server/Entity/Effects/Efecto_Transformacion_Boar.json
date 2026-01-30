@@ -13,7 +13,7 @@
     "Duration": 60,
     
     "_INFO_ModelChange": "ID del modelo en que te transformas (Boar, Bear_Grizzly, etc)",
-    "_MODELOS_EJEMPLO": "Boar, Bear_Grizzly, Wolf, Chicken, Cow, Pig, Sheep, etc",
+    "_MODELOS_EJEMPLO": "Boar, Bear_Grizzly, Werewolf, Chicken, Cow, Pig, Sheep, etc",
     "ModelChange": "Boar",
     
     "_INFO_ApplicationEffects": "Efectos adicionales durante la transformacion",

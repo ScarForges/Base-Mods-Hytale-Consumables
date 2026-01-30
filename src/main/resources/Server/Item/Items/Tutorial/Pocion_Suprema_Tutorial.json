@@ -19,6 +19,7 @@
         "Effect": {
             "Interactions": [
                 { "Type": "ApplyEffect", "EffectId": "Efecto_Velocidad" },
+                { "Type": "ApplyEffect", "EffectId": "Efecto_Curacion" },
                 { "Type": "MensajeTutorial" }
             ]
         },
